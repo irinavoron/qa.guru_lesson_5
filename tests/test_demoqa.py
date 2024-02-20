@@ -32,6 +32,3 @@ def test_form_filling():
     browser.element('.table').should(have.text('picture.jpg'))
     browser.element('.table').should(have.text('NCR, Delhi'))
     browser.element('.table').should(have.text('NCR Delhi'))
-
-
-
