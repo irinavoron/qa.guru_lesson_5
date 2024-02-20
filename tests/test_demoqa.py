@@ -3,7 +3,7 @@ import os
 
 
 def test_form_filling():
-    browser.open("/")
+    browser.open("/automation-practice-form")
     browser.element("#firstName").type('Irina')
     browser.element("#lastName").type("Voron")
     browser.element('#userEmail').with_(type_by_js=True).type('voron@gmail.com')
