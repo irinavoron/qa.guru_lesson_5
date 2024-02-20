@@ -2,7 +2,7 @@ from selene import browser, command, by, have
 import os
 
 
-def U():
+def test_form_filling():
     browser.open("/")
     browser.element("#firstName").type('Irina')
     browser.element("#lastName").type("Voron")
