@@ -1,13 +1,16 @@
 from pathlib import Path
-
 from selene import browser, command, by, have
-import os
-
 import tests
+
+class RegistrationPage:
+
+    def open(self, url):
+        browser.open(url)
 
 
 def test_registration_form():
-    browser.open('/automation-practice-form')
+    registration_page = RegistrationPage()
+    registration_page.open('/automation-practice-form')
 
     # WHEN
     browser.element('#firstName').type('firstName')
