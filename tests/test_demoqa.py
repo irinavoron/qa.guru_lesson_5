@@ -1,5 +1,9 @@
+from pathlib import Path
+
 from selene import browser, command, by, have
 import os
+
+import tests
 
 
 def test_registration_form():
@@ -20,7 +24,9 @@ def test_registration_form():
     browser.element('#subjectsInput').type('english').press_enter()
     browser.all('[for^=hobbies-checkbox]').element_by(have.text('Sports')).perform(command.js.scroll_into_view)
     browser.all('[for^=hobbies-checkbox]').element_by(have.text('Sports')).click()
-    browser.element('#uploadPicture').send_keys(os.path.abspath('ressources/picture.jpg'))
+    browser.element('#uploadPicture').set_value(
+        str(Path(tests.__file__).parent.joinpath('resources/picture.jpg').absolute())
+    )
     browser.element('#currentAddress').type('Some Street, 1')
     browser.element('#state').click()
     browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
