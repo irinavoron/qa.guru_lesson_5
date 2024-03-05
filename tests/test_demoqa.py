@@ -1,8 +1,5 @@
 from pathlib import Path
-
 from selene import browser, command, by, have
-import os
-
 import tests
 
 
