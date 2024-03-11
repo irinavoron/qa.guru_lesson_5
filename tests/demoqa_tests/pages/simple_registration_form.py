@@ -10,9 +10,6 @@ class SimpleRegistrationForm:
         self.submit = browser.element('#submit')
         self.output = browser.all('#output p')
 
-    def open(self):
-        browser.open('/text-box')
-
     def fill_full_name(self, value):
         self.full_name.type(value)
 
@@ -28,4 +25,3 @@ class SimpleRegistrationForm:
     def submit_form(self):
         self.submit.perform(command.js.scroll_into_view)
         self.submit.click()
-
