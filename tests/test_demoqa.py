@@ -1,4 +1,5 @@
 from selene import have
+
 from tests.demoqa_tests.pages.registration_page import RegistrationPage
 
 
