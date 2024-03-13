@@ -8,8 +8,8 @@ class RegistrationPage:
     def __init__(self):
         self.registration_data = browser.element('.table').all('td').even
 
-    def open(self, url):
-        browser.open(url)
+    def open(self):
+        browser.open('/automation-practice-form')
 
     def fill_first_name(self, value):
         browser.element('#firstName').type(value)
