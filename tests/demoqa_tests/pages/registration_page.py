@@ -6,8 +6,8 @@ from tests.demoqa_tests.data.users import User
 
 
 class RegistrationPage:
-    def open(self, url):
-        browser.open(url)
+    def open(self):
+        browser.open('/automation-practice-form')
 
     def register(self, user: User):
         browser.element('#firstName').type(user.first_name)
