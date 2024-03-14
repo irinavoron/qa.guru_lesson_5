@@ -1,5 +1,5 @@
-from tests.demoqa_tests.data import users
-from tests.demoqa_tests.pages.registration_page import RegistrationPage
+from demoqa_tests.data import users
+from demoqa_tests.pages.registration_page import RegistrationPage
 
 
 def test_registration_form():
